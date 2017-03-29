@@ -1,0 +1,55 @@
+<div id="mpinDeleteView" class="mpin-content-view">
+
+  <div class="mpin-ui">
+    <div class="mpin-select">
+      <div class="mpin-select-label">
+        <div class="mpin-right">{{delete_userid_label}}</div>
+      </div>
+      <div class="mpin-select-box mpin-first-view">
+        <div class="mpin-btn-group">
+          <button class="mpin-dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <div id="mpinDeleteMenuTarget" class="text">
+              {{delete_select_default_value}}
+            </div>
+            <div class="icon"><img src="{{ image_base_url }}/caret.png"></div>
+          </button>
+
+          <ul id="menuDeleteDropDownMenu" class="mpin-dropdown-menu">
+            <li class="primary">
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="mpin-select-box mpin-second-view">
+        <div id="mpinDeleteUserIdFixed" class="mpin-select-fixed"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mpin-ui">
+    <div id="mpinDeleteUserIdError" class="mpin-error-message mpin-message-form mpin-hide">
+    </div>
+  </div>
+
+
+  <div class="mpin-button mpin-ui mpin-first-view">
+    <button type="button" id="mpinDeleteDeleteButton" class="mpin-btn mpin-btn-primary">{{delete_delete_button}}</button>
+  </div>
+
+  <div class="mpin-ui mpin-second-view">
+    <div id="mpinDeleteUserIdConfirmMessage" class="mpin-error-message mpin-message-center mpin-hide mpin-break-all">
+    </div>
+  </div>
+
+  <div class="mpin-ui mpin-second-view">
+    <div class="mpin-button-double">
+      <div class="button-first">
+        <button type="button" id="mpinDeleteConfirmButton" class="mpin-btn mpin-btn-danger">{{delete_confirm_button}}</button>
+      </div>
+      <div class="button-last">
+        <button type="button" id="mpinDeleteCancelButton" class="mpin-btn mpin-btn-primary">{{delete_cancel_button}}</button>
+      </div>
+    </div>
+  </div>
+</div>
+

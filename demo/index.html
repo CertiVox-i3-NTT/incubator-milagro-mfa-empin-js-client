@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Flat UI Free 101 Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <!-- Loading Bootstrap -->
+    <!--link href="css/bootstrap.min.css" rel="stylesheet"-->
+
+    <!-- Loading Custom UI -->
+    <link href="css/mpin.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="js/vendor/html5shiv.js"></script>
+      <script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="mpinClient" data-mpin-initial-showing="on" data-mpin-skip-user-id-validation="on" data-mpin-pin-max-length="10" data-mpin-pin-min-length="4" data-mpin-language="en" data-mpin-rpa-base-url="http://public.milagro.io" data-mpin-image-base-url="https://public.milagro.io/public/images" data-mpin-form-id="login-form1" data-mpin-username-id="username" data-mpin-password-id="password"
+    ></div>
+
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <div id="login" class="row col-xs-6 col-xs-offset-3">
+            <h1 class="text-center">Sign in</h1>
+
+            <div class="form">
+              <form id="login-form" class="form-horizontal" action="./home.html" accept-charset="UTF-8" method="post">
+
+                <div class="form-group">
+                  <label for="input_id" class="col-sm-2 control-label">ID</label>
+                  <div class="col-sm-10">
+                    <input id="username" class="form-control" placeholder="ID(Email)" type="text" name="login[email]" />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="input_password" class="col-sm-2 control-label">Password</label>
+                  <div class="col-sm-10">
+                    <input id="password" class="form-control" placeholder="Password" type="password" name="login[password]" />
+                  </div> 
+                </div>
+
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10">
+                    <input type="submit" name="commit" value="Sign in" class="btn btn-large btn-primary" />
+                  </div>
+                </div>
+
+              </form>
+           </div>
+          </div>
+        </div>
+      </div><!--/row-->
+    </div> <!-- /container -->
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!--script src="js/jquery-1.11.3.js"></script-->
+    <script type="text/javascript" src="js/mootools-yui-compressed.js"></script>
+    <!--script src="js/bootstrap.min.js"></script-->
+    <script src="http://localhost:35729/livereload.js"></script>
+
+    <!-- load mpin module -->
+    <script src="js/mpin.js"></script>
+    <!--script src="js/mpin.min.js"></script-->
+  </body>
+</html>

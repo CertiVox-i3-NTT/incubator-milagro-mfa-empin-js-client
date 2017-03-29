@@ -1,0 +1,7 @@
+{
+  "deployTargetDirJS": "/opt/src/new-mpin-services/servers/demo/public/js",
+  "deployTargetDirCSS": "/opt/src/new-mpin-services/servers/demo/public/css",
+  "deployTargetDirImage": "/opt/src/new-mpin-rpa-go/public/images",
+  "imageBaseURL": "https://public.milagro.io/public/images",
+  "rpaBaseURL": "https://public.milagro.io"
+}

@@ -1,0 +1,41 @@
+<div id="mpinInitialView" class="mpin-content-view">
+
+  <div class="mpin-ui">
+    <div class="mpin-select">
+      <div class="mpin-select-label">
+        <div class="mpin-right">{{initial_select_menu_label}}</div>
+      </div>
+      <div class="mpin-select-box">
+        <div class="mpin-btn-group">
+          <button id="mpinInitialMenu" class="mpin-dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <div id="mpinInitialMenuTarget" class="text">
+              {{initial_select_menu_default_text}}
+            </div>
+            <div class="icon"><img src="{{ image_base_url }}/caret.png"></div>
+          </button>
+
+          <ul class="mpin-dropdown-menu">
+            <li>
+              <a id="mpinInitialInstallButton" href="javascript:void(0)" class="mpin-menu mpin-initial-menu" data-menu="install">{{initial_select_menu_install_text}}</a>
+            </li>
+            <li>
+              <a id="mpinInitialMobileButton" href="javascript:void(0)" class="mpin-strong mpin-menu mpin-initial-menu" data-menu="mobile">{{initial_select_menu_mobile_text}}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mpin-ui">
+    <div class="mpin-button install-menu-view">
+      <button type="button" id="mpinInitialGoToInstallButton" class="mpin-btn mpin-btn-primary">{{initial_goto_install_button}}</button>
+    </div>
+  </div>
+
+  <div class="mpin-button mpin-ui mobile-menu-view">
+    <button type="button" id="mpinInitialViewGoToMobileButton" class="mpin-btn mpin-btn-primary">{{initial_goto_mobile_button}}</button>
+  </div>
+
+</div>
+

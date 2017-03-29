@@ -1,0 +1,44 @@
+.mpin-link {
+  @media #{$small} { width: $small-mpin-ui-width; }
+  @media #{$middle} { width: $middle-mpin-ui-width; }
+  vertical-align: middle;
+  display: table-cell;
+
+  @media #{$small} {
+    height: $small-mpin-link-height;
+    margin-top: $small-mpin-link-padding-tb;
+    margin-bottom: $small-mpin-link-padding-tb;
+    font-size: $small-mpin-font-size-text;
+  }
+  @media #{$middle} {
+    height: $middle-mpin-link-height;
+    margin-top: $middle-mpin-link-padding-tb;
+    margin-bottom: $middle-mpin-link-padding-tb;
+    font-size: $middle-mpin-font-size-text;
+  }
+
+  .mpin-link-left, .mpin-link-right {
+    vertical-align: middle;
+    display: table-cell;
+    color: $mpin-color-link;
+    text-decoration: underline;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .mpin-link-left {
+    float: left;
+    text-align: left;
+    
+    @media #{$small} { margin-left: 20px; }
+    @media #{$middle} { margin-left: 10px; }
+  }
+  .mpin-link-right {
+    float: right;
+    text-align: right;
+    @media #{$small} { margin-right: 20px; }
+    @media #{$middle} { margin-right: 10px; }
+  }
+}

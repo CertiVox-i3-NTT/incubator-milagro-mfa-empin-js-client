@@ -1,0 +1,168 @@
+.mpin-manager {
+  .mpin-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    outline: 0;
+    z-index: $mpin-z-index-bg;
+
+    background-color: black;
+    opacity: 0.5;
+  }
+
+  .mpin-block {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    outline: 0;
+    z-index: $mpin-z-index-block;
+
+    background-color: transparent;
+    opacity: 0;
+  }
+
+  .mpin-loading {
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    outline: 0;
+    z-index: $mpin-z-index-block;
+
+    background-color: black;
+    opacity: 0.5;
+  }
+
+}
+
+.mpin-manager {
+  .mpin-wrapper {
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    outline: 0;
+    z-index: $mpin-z-index-layer-1;
+  }
+  .mpin-modal {
+
+    @media #{$small} { width: $small-mpin-content-whole-width; }
+    @media #{$small} { margin: 50px auto; }
+
+    @media #{$middle} { width: $middle-mpin-content-whole-width; }
+    @media #{$middle} { margin: 200px auto; }
+
+    
+  }
+
+
+
+  .mpin-toolbar {
+    width: 100%;
+    @media #{$small} { min-height: $small-mpin-toolbar-min-height; }
+    @media #{$middle} { min-height: $middle-mpin-toolbar-min-height; }    
+    background-color: transparent;
+  }
+
+  .mpin-tool {
+    background-color: $trans-color;
+    opacity: $trans-opacity;
+    @media #{$small} { height: $small-mpin-tool-height; }
+    @media #{$middle} { height: $middle-mpin-tool-height; }    
+    
+    color: $mpin-black;
+
+    .mpin-back {
+      @media #{$small} { height: $small-mpin-tool-height; }
+      @media #{$middle} { height: $middle-mpin-tool-height; }    
+      
+      float: left;
+      cursor: pointer;
+      @media #{$small} { font-size: $small-mpin-font-size-button; }
+      @media #{$middle} { font-size: $middle-mpin-font-size-button; }    
+
+      img {
+        @media #{$small} { height: $small-mpin-tool-height; }
+        @media #{$middle} { height: $middle-mpin-tool-height; }    
+        
+        width: auto;
+      }
+    }
+    .mpin-close {
+      background-color: $mpin-green;
+      float: right;
+      cursor: pointer;
+      @media #{$small} { height: $small-mpin-tool-height; }
+      @media #{$middle} { height: $middle-mpin-tool-height; }    
+      
+      img {
+        @media #{$small} { height: $small-mpin-tool-height; }
+        @media #{$middle} { height: $middle-mpin-tool-height; }    
+        
+        width: auto;
+      }
+    }
+  }
+  .mpin-title {
+    background-color: $trans-color;
+    opacity: $trans-opacity;
+    width: 100%;
+    font-weight: $mpin-font-weight-bold;
+    @media #{$small} {
+      height: $small-mpin-title-height;
+      font-size: $small-mpin-font-size-title;
+      letter-spacing: $small-mpin-title-letter-spacing;
+    }
+    @media #{$middle} {
+      height: $middle-mpin-title-height;
+      font-size: $middle-mpin-font-size-title;
+      letter-spacing: $middle-mpin-title-letter-spacing;
+    }
+    text-align: center;
+    color: $mpin-black;
+  }
+
+
+
+  .mpin-contents {
+    width: 100%;
+    @media #{$small} { height: $small-mpin-content-initial-height; }
+    @media #{$middle} { height: $middle-mpin-content-initial-height; }        
+    background-color: $trans-color;
+    opacity: $trans-opacity;
+  }
+
+}
+
+.mpin-manager {
+  .mpin-wrapper.virtual,
+  .mpin-modal.virtual,
+  .mpin-toolbar.virtual,
+  .mpin-close.virtual,
+  .mpin-close-box.virtual,
+  .mpin-tool.virtual,
+  .mpin-title.virtual,
+  .mpin-contents.virtual {
+    background-color: transparent;
+    opacity: 1;
+  }
+
+
+  .mpin-contents.virtual {
+    z-index: $mpin-z-index-layer-2;
+    height: auto;
+    opacity: 1;
+
+    &.mpin-overflow-x-hidden {
+      overflow-x: hidden;
+    }
+  }
+}

@@ -1,0 +1,195 @@
+// [General]
+// Id
+// All selector wrapper
+$mpinClientId: "#mpinClient";
+
+// Responsive Design
+$small:  "only screen and (max-width:509px)";
+$middle: "only screen and (min-width:510px)";
+
+// [mixin]
+@mixin three_dot_leader {
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// [common variables] ----------------------------------------------------------------
+// z-index
+$mpin-z-index: 100;
+$mpin-z-index-bg: $mpin-z-index + 0;
+$mpin-z-index-layer-1: $mpin-z-index + 10;
+$mpin-z-index-layer-2: $mpin-z-index + 20;
+$mpin-z-index-dropdown: $mpin-z-index + 31;
+$mpin-z-index-block: $mpin-z-index + 40;
+
+// color
+$mpin-green: #43bb3b;
+$mpin-black: black;
+$mpin-color-text: black;
+$mpin-color-link: black;
+$mpin-color-text-info: blue;
+$mpin-color-text-error: #ff0000;
+$mpin-color-button-text: #ffffff;
+$mpin-color-menu-selected: #d1d1d1;
+$mpin-color-menu-strong: #2b8a26;
+$mpin-color-timer-active: $mpin-green;
+$mpin-color-placeholder: #a9a9a9;
+
+$mpin-button-color-gradient-primary-border: lightgreen;
+$mpin-button-color-gradient-primary-upper: lightgreen;
+$mpin-button-color-gradient-primary-lower: lightgreen;
+$mpin-button-color-gradient-primary-active-border: transparent;
+$mpin-button-color-gradient-primary-active-upper: green;
+$mpin-button-color-gradient-primary-active-lower: green;
+
+$mpin-button-color-gradient-danger-border: #e31e29;
+$mpin-button-color-gradient-danger-upper: #e54147;
+$mpin-button-color-gradient-danger-lower: #dc021b;
+$mpin-button-color-gradient-danger-active-border: transparent;
+$mpin-button-color-gradient-danger-active-upper: #ef8789;
+$mpin-button-color-gradient-danger-active-lower: #e86267;
+
+// transparent UI ---------------------------------------------------------------
+$trans-color: white;
+$trans-opacity: 0.4;
+$trans-blur-radius: 10px;
+
+// font weight
+$mpin-font-weight-light: 400;
+$mpin-font-weight-base: 500;
+$mpin-font-weight-bold: 600;
+
+// [small screen variables] ----------------------------------------------------------------
+$small-mpin-font-size-text: 11px;
+$small-mpin-font-size-message: 12px;
+$small-mpin-font-size-button: 16px;
+$small-mpin-font-size-title: 22px;
+$small-mpin-font-size-password-circle: 15px;
+$small-mpin-font-size-password-circle-ie: 15px;
+$small-mpin-font-size-password-circle-chrome-opera: 27px;
+$small-mpin-font-size-password-circle-firefox: 27px;
+
+$small-mpin-content-whole-width: 300px;
+$small-mpin-content-padding-rl: 21px;
+$small-mpin-content-width: $small-mpin-content-whole-width - $small-mpin-content-padding-rl * 2;
+$small-mpin-content-initial-height: 0px;
+
+// mpin-manager
+$small-mpin-tool-height: 40px;
+$small-mpin-title-height: 35px;
+$small-mpin-toolbar-min-height: $small-mpin-tool-height + $small-mpin-title-height;
+$small-mpin-title-letter-spacing: 1px;
+
+// ui
+$small-mpin-ui-width: $small-mpin-content-width;
+$small-mpin-ui-height: 45px;
+
+// input
+$small-mpin-input-whole-height: 35px;
+$small-mpin-input-padding-tb: 10px;
+$small-mpin-input-height: $small-mpin-input-whole-height - $small-mpin-input-padding-tb * 2;
+
+$small-mpin-input-box-whole-width: 200px;
+$small-mpin-input-box-margin-right: 20px;
+$small-mpin-input-border-width: 1px;
+$small-mpin-input-padding-rl: 10px;
+$small-mpin-input-box-width: $small-mpin-input-box-whole-width - $small-mpin-input-padding-rl * 2 - $small-mpin-input-border-width * 2;
+$small-mpin-input-box-text-max-width: 160px;
+$small-mpin-input-box-text-padding-tb: 5px;
+
+$small-mpin-input-label-width: $small-mpin-ui-width - $small-mpin-input-box-whole-width - $small-mpin-input-box-margin-right;
+$small-mpin-input-label-margin-right: 10px;
+
+// button
+$small-mpin-button-width: $small-mpin-ui-width;
+$small-mpin-button-height: 40px;
+$small-mpin-button-margin-tb: 12px;
+
+// link
+$small-mpin-link-height: 30px;
+$small-mpin-link-padding-tb: 5px;
+
+
+// dropdown-menu
+$small-mpin-dropdown-toggle-width: 200px;
+$small-mpin-dropdown-toggle-height: 35px;
+$small-mpin-dropdown-menu-whole-width: $small-mpin-dropdown-toggle-width;
+$small-mpin-dropdown-menu-border-width: 1px;
+$small-mpin-dropdown-menu-width: $small-mpin-dropdown-menu-whole-width - $small-mpin-dropdown-menu-border-width * 2;
+
+$small-mpin-dropdown-text-padding-left: 10px;
+$small-mpin-dropdown-text-padding-tb: 10px;
+$small-mpin-dropdown-text-width: $small-mpin-dropdown-menu-width - $small-mpin-dropdown-text-padding-left;
+
+// message
+$small-mpin-error-message-left-padding: $small-mpin-input-label-width;
+$small-mpin-error-message-width: $small-mpin-ui-width - $small-mpin-error-message-left-padding;
+
+// [middle screen variables] ----------------------------------------------------------------
+$middle-mpin-font-size-text: 14px;
+$middle-mpin-font-size-message: 15px;
+$middle-mpin-font-size-button: 18px;
+$middle-mpin-font-size-title: 24px;
+$middle-mpin-font-size-password-circle: 18px;
+$middle-mpin-font-size-password-circle-ie: 18px;
+$middle-mpin-font-size-password-circle-chrome-opera: 28px;
+$middle-mpin-font-size-password-circle-firefox: 28px;
+
+$middle-mpin-content-whole-width: 480px;
+$middle-mpin-content-padding-rl: 70px;
+$middle-mpin-content-width: $middle-mpin-content-whole-width - $middle-mpin-content-padding-rl * 2;
+$middle-mpin-content-initial-height: 0px;
+
+
+// mpin-manager
+$middle-mpin-tool-height: 50px;
+$middle-mpin-title-height: 40px;
+$middle-mpin-toolbar-min-height: $middle-mpin-tool-height + $middle-mpin-title-height;
+$middle-mpin-title-letter-spacing: 2px;
+
+// ui
+$middle-mpin-ui-width: $middle-mpin-content-width;
+$middle-mpin-ui-height: 60px;
+
+// input
+$middle-mpin-input-whole-height: 40px;
+$middle-mpin-input-padding-tb: 10px;
+$middle-mpin-input-height: $middle-mpin-input-whole-height - $middle-mpin-input-padding-tb * 2;
+
+$middle-mpin-input-box-whole-width: 270px;
+$middle-mpin-input-box-margin-right: 20px;
+$middle-mpin-input-border-width: 1px;
+$middle-mpin-input-padding-rl: 10px;
+$middle-mpin-input-box-width: $middle-mpin-input-box-whole-width - $middle-mpin-input-padding-rl * 2 - $middle-mpin-input-border-width * 2;
+$middle-mpin-input-box-text-max-width: 200px;
+$middle-mpin-input-box-text-padding-tb: 5px;
+
+$middle-mpin-input-label-width: $middle-mpin-ui-width - $middle-mpin-input-box-whole-width - $middle-mpin-input-box-margin-right;
+$middle-mpin-input-label-margin-right: 12px;
+
+// button
+$middle-mpin-button-width: $middle-mpin-ui-width;
+$middle-mpin-button-height: 48px;
+$middle-mpin-button-margin-tb: 15px;
+
+// link
+$middle-mpin-link-height: 40px;
+$middle-mpin-link-padding-tb: 10px;
+
+
+// dropdown-menu
+$middle-mpin-dropdown-toggle-width: 270px;
+$middle-mpin-dropdown-toggle-margin-right: 20px;
+$middle-mpin-dropdown-toggle-height: 40px;
+$middle-mpin-dropdown-menu-whole-width: $middle-mpin-dropdown-toggle-width;
+$middle-mpin-dropdown-menu-border-width: 1px;
+$middle-mpin-dropdown-menu-width: $middle-mpin-dropdown-menu-whole-width - $middle-mpin-dropdown-menu-border-width * 2;
+
+$middle-mpin-dropdown-text-padding-left: 20px;
+$middle-mpin-dropdown-text-padding-tb: 10px;
+$middle-mpin-dropdown-text-width: $middle-mpin-dropdown-menu-width - $middle-mpin-dropdown-text-padding-left;
+
+// message
+$middle-mpin-error-message-left-padding: $middle-mpin-input-label-width;
+$middle-mpin-error-message-width: $middle-mpin-ui-width - $middle-mpin-error-message-left-padding;

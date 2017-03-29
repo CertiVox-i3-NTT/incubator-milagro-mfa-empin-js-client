@@ -1,0 +1,17 @@
+# mac
+.DS_Store
+
+# mpin_client
+/dist/
+node_modules/
+.sass-cache/
+tmp/
+settings.json
+bower_components/
+
+# miotcl module
+lib/mpin/miotcl.js
+lib/mpin/mpinjs.js
+
+# jsdoc
+out/

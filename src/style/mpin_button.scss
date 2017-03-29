@@ -1,0 +1,167 @@
+.mpin-btn-group {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.mpin-btn {
+  font-weight: $mpin-font-weight-light;
+  color: $mpin-color-button-text;
+
+  display: inline-block;
+  margin-bottom: 0;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  line-height: 1.42857;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+
+  @media #{$small} {
+    width: $small-mpin-button-width;
+    margin-top: $small-mpin-button-margin-tb;
+    margin-bottom: $small-mpin-button-margin-tb;
+    height: $small-mpin-button-height;
+    font-size: $small-mpin-font-size-button;
+    letter-spacing: $small-mpin-title-letter-spacing;
+  }
+  @media #{$middle} {
+    width: $middle-mpin-button-width;
+    margin-top: $middle-mpin-button-margin-tb;
+    margin-bottom: $middle-mpin-button-margin-tb;
+    height: $middle-mpin-button-height;
+    font-size: $middle-mpin-font-size-button;
+    letter-spacing: $middle-mpin-title-letter-spacing;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.mpin-btn-primary {
+  border-color: $mpin-button-color-gradient-primary-border;
+  background-image:-webkit-gradient(
+    linear,left top,left bottom,
+    from($mpin-button-color-gradient-primary-upper),
+    to($mpin-button-color-gradient-primary-lower)
+  );
+  background-image:-moz-linear-gradient(
+    top,
+    $mpin-button-color-gradient-primary-upper 0%,
+    $mpin-button-color-gradient-primary-lower
+  );
+
+  // IE 8
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='" + $mpin-button-color-gradient-primary-upper + "', endColorstr='" + $mpin-button-color-gradient-primary-lower + "', GradientType=0)";
+ 
+  // IE 10
+  background: linear-gradient(
+    to bottom,
+    $mpin-button-color-gradient-primary-upper,
+    $mpin-button-color-gradient-primary-lower
+  );
+};
+
+.mpin-btn-primary:hover {
+  border-color: $mpin-button-color-gradient-primary-active-border;
+  background-image:-webkit-gradient(
+    linear,left top,left bottom,
+    from($mpin-button-color-gradient-primary-active-upper),
+    to($mpin-button-color-gradient-primary-active-lower)
+  );
+  background-image:-moz-linear-gradient(
+    top,
+    $mpin-button-color-gradient-primary-active-upper 0%,
+    $mpin-button-color-gradient-primary-active-lower
+  );
+
+  // IE 8
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='" + $mpin-button-color-gradient-primary-active-upper + "', endColorstr='" + $mpin-button-color-gradient-primary-active-lower + "', GradientType=0)";
+ 
+  // IE 10
+  background: linear-gradient(
+    to bottom,
+    $mpin-button-color-gradient-primary-active-upper,
+    $mpin-button-color-gradient-primary-active-lower
+  );
+};
+
+.mpin-btn-danger {
+  border-color: $mpin-button-color-gradient-danger-border;
+  background-image:-webkit-gradient(
+    linear,left top,left bottom,
+    from($mpin-button-color-gradient-danger-upper),
+    to($mpin-button-color-gradient-danger-lower)
+  );
+  // Firefox
+  background-image:-moz-linear-gradient(
+    top,
+    $mpin-button-color-gradient-danger-upper 0%,
+    $mpin-button-color-gradient-danger-lower
+  );
+
+  // IE 8
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='" + $mpin-button-color-gradient-danger-upper + "', endColorstr='" + $mpin-button-color-gradient-danger-lower + "', GradientType=0)";
+ 
+  // IE 10
+  background: linear-gradient(
+    to bottom,
+    $mpin-button-color-gradient-danger-upper,
+    $mpin-button-color-gradient-danger-lower
+  );
+};
+
+.mpin-btn-danger:hover {
+  border-color: $mpin-button-color-gradient-danger-active-border;
+  background-image:-webkit-gradient(
+    linear,left top,left bottom,
+    from($mpin-button-color-gradient-danger-active-upper),
+    to($mpin-button-color-gradient-danger-active-lower)
+  );
+  // Firefox
+  background-image:-moz-linear-gradient(
+    top,
+    $mpin-button-color-gradient-danger-active-upper 0%,
+    $mpin-button-color-gradient-danger-active-lower
+  );
+
+  // IE 8
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='" + $mpin-button-color-gradient-danger-active-upper + "', endColorstr='" + $mpin-button-color-gradient-danger-active-lower + "', GradientType=0)";
+ 
+  // IE 10
+  background: linear-gradient(
+    to bottom,
+    $mpin-button-color-gradient-danger-active-upper,
+    $mpin-button-color-gradient-danger-active-lower
+  );
+};
+
+.mpin-button-double {
+  .button-first, .button-last {
+    .mpin-btn {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  .button-first {
+    @media #{$small} { margin-top: 10px; }
+    @media #{$middle} { margin-top: 30px; }
+  }
+  .button-last {
+    @media #{$small} { margin-top: 10px; }
+    @media #{$middle} { margin-top: 10px; }
+    margin-bottom: 10px;
+  }
+}

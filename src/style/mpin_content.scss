@@ -1,0 +1,93 @@
+.mpin-content-view {
+  @media #{$small} {
+    width: $small-mpin-content-width;
+    padding-left: $small-mpin-content-padding-rl;
+    padding-right: $small-mpin-content-padding-rl;
+    padding-bottom: 10px;
+  }
+  @media #{$middle} {
+    width: $middle-mpin-content-width;
+    padding-left: $middle-mpin-content-padding-rl;
+    padding-right: $middle-mpin-content-padding-rl;
+    padding-bottom: 20px;
+  }
+
+  // [WARNING] This is needed, fix content size during scrolling
+  border-width: 1px;
+  border-color: transparent;
+  border-style: solid;
+}
+
+.mpin-ui {
+  @media #{$small} {
+    width: $small-mpin-ui-width;
+  }
+  @media #{$middle} {
+    width: $middle-mpin-ui-width;
+  }
+}
+
+// Mobile Login View
+.mpin-canvas {
+  text-align: center;
+  position: relative;
+
+  .mpin-time-circle {
+    @media #{$small} {
+      width: 100px;
+      height: 100px;
+    }
+    @media #{$middle} {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  .mpin-time-display {
+    position: absolute;
+    @media #{$small} {
+      width: 75px;
+      height: 50px;
+    }
+    @media #{$middle} {
+      width: 150px;
+      height: 100px;
+    }
+
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+
+    display: table-cell;
+    vertical-align: middle;
+
+    .number {
+      @media #{$small} { font-size: 40px; }
+      @media #{$middle} { font-size: 80px; }
+      color: $mpin-color-timer-active;
+    }
+  }
+}
+
+.mpin-text {
+  @media #{$small} { width: $small-mpin-ui-width; }
+  @media #{$middle} { width: $middle-mpin-ui-width; }
+
+  vertical-align: middle;
+  display: table-cell;
+  text-align: center;
+  .small {
+    @media #{$small} { font-size: 12px; }
+    @media #{$middle} { font-size: 20px; }
+    
+    font-weight: $mpin-font-weight-bold;
+    color: $mpin-black;
+  }
+  .large {
+    @media #{$small} { font-size: 30px; }
+    @media #{$middle} { font-size: 60px; }
+    color: black;
+  }
+}

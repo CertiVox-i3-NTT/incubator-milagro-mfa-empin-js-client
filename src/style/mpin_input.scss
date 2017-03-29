@@ -1,0 +1,183 @@
+.mpin-form-control {
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.mpin-input {
+  @media #{$small} { height: $small-mpin-ui-height; }
+  @media #{$middle} { height: $middle-mpin-ui-height; }
+  vertical-align: middle;
+  display: table-cell;
+
+  .mpin-input-label, .mpin-input-box {
+    vertical-align: middle;
+    display: table-cell;
+  }
+
+  .mpin-input-label {
+    @media #{$small} { width: $small-mpin-input-label-width; }
+    @media #{$middle} { width: $middle-mpin-input-label-width; }
+    color: $mpin-black;
+    @media #{$small} { font-size: $small-mpin-font-size-text;}
+    @media #{$middle} { font-size: $middle-mpin-font-size-text; }
+
+    .mpin-right {
+      float: right;
+      @media #{$small} { margin-right: $small-mpin-input-label-margin-right; }
+      @media #{$middle} { margin-right: $middle-mpin-input-label-margin-right; }
+      font-weight: $mpin-font-weight-bold;
+    }
+  }
+
+  .mpin-input-box {
+    @media #{$small} { width: $small-mpin-input-box-width; }
+    @media #{$middle} { width: $middle-mpin-input-box-width; }
+    
+    input[type="text"], input[type="password"] {
+      font-weight: $mpin-font-weight-bold;
+      @media #{$small} {
+        width: $small-mpin-input-box-width;
+        height: $small-mpin-input-height;
+        padding-top: $small-mpin-input-padding-tb;
+        padding-bottom: $small-mpin-input-padding-tb;
+        padding-left: $small-mpin-input-padding-rl;
+        padding-right: $small-mpin-input-padding-rl;
+        font-size: $small-mpin-font-size-text;
+        margin-right: $small-mpin-input-box-margin-right;
+      }
+      @media #{$middle} {
+        width: $middle-mpin-input-box-width;
+        height: $middle-mpin-input-height;
+        padding-top: $middle-mpin-input-padding-tb;
+        padding-bottom: $middle-mpin-input-padding-tb;
+        padding-left: $middle-mpin-input-padding-rl;
+        padding-right: $middle-mpin-input-padding-rl;
+        font-size: $middle-mpin-font-size-text;
+        margin-right: $middle-mpin-input-box-margin-right;
+      }
+      color: $mpin-color-text;
+      box-sizing: content-box;
+
+      &.mpin-input-error {
+        background-color: #f5b7b8 !important;
+      }
+    }
+
+    .mpin-pin-input {
+      position: relative;
+      @media #{$small} {
+        height: $small-mpin-input-whole-height;
+      }
+      @media #{$middle} {
+        height: $middle-mpin-input-whole-height;
+      }
+
+      input[type="password"].mpin-pin-input-real,
+      input[type="password"].mpin-pin-input-label,
+      input[type="password"].mpin-pin-input-base
+       {
+        position: absolute;
+        top: 0px;
+      }
+
+      input[type="password"].mpin-pin-input-real,
+      input[type="password"].mpin-pin-input-base {
+        // Default (including Safari)
+        @media #{$small} {
+          font-size: $small-mpin-font-size-password-circle;
+        }
+        @media #{$middle} {
+          font-size: $middle-mpin-font-size-password-circle;
+        }
+
+        // Chrome 31+ (and Opera 18+)
+        @supports (-webkit-appearance:none) and (not (-webkit-marquee-repetition:infinite)) and (not (-ms-accelerator:true)) {
+          @media #{$small} {
+            font-size: $small-mpin-font-size-password-circle-chrome-opera;
+          }
+          @media #{$middle} {
+            font-size: $middle-mpin-font-size-password-circle-chrome-opera;
+          }
+        }
+
+        // Firefox 31+ (CSS3 Variable Method)
+        @supports (-moz-appearance:none) {
+          --this-font-size-small-variable: $small-mpin-font-size-password-circle-firefox;
+          --this-font-size-middle-variable: $middle-mpin-font-size-password-circle-firefox;
+          @media #{$small} {
+            font-size: var(--this-font-size-small-variable);
+          }
+          @media #{$middle} {
+            font-size: var(--this-font-size-middle-variable);
+          }
+        }
+
+        // IE 10+
+        @media (-ms-high-contrast:none) {
+          @media #{$small} {
+            font-size: $small-mpin-font-size-password-circle-ie;
+          }
+          @media #{$middle} {
+            font-size: $middle-mpin-font-size-password-circle-ie;
+          }
+        }
+      }
+
+
+
+      input[type="password"].mpin-pin-input-real {
+        background-color: transparent;
+        z-index: $mpin-z-index-layer-2 + 2;
+      }
+      input[type="password"].mpin-pin-input-label {
+        background-color: transparent;
+        z-index: $mpin-z-index-layer-2 + 1;
+        opacity: 1;
+        @media #{$small} {
+          font-size: $small-mpin-font-size-text;
+        }
+        @media #{$middle} {
+          font-size: $middle-mpin-font-size-text;
+        }
+      }
+      input[type="password"].mpin-pin-input-label.mpin-label-on {
+        // default color
+      }
+      input[type="password"].mpin-pin-input-label.mpin-label-off {
+        color: transparent;
+      }
+      input[type="password"].mpin-pin-input-base {
+        background-color: white;
+        opacity: 1;
+        color: $mpin-color-placeholder;
+        z-index: $mpin-z-index-layer-2;
+      }
+    }
+  }
+
+  .mpin-input-box {
+    .mpin-input-fixed {
+      @media #{$small} {
+        width: $small-mpin-input-box-width;
+        font-size: $small-mpin-font-size-text;
+      }
+      @media #{$middle} {
+        width: $middle-mpin-input-box-width;
+        font-size: $middle-mpin-font-size-text;
+      }
+      color: $mpin-color-text;
+      font-weight: $mpin-font-weight-bold;
+      @include three_dot_leader;
+    }
+  }
+}

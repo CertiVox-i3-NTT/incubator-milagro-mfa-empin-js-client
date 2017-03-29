@@ -1,0 +1,48 @@
+.mpin-info-message,
+.mpin-error-message {
+  @media #{$small} {
+    font-size: $small-mpin-font-size-message;
+    width: $small-mpin-ui-width;
+    padding-top: 4px;
+  }
+  @media #{$middle} {
+    font-size: $middle-mpin-font-size-message;
+    width: $middle-mpin-ui-width;
+    padding-top: 8px;
+  }
+
+  vertical-align: middle;
+  display: table-cell;
+  font-weight: $mpin-font-weight-bold;
+  &.mpin-message-center {
+    text-align: center;
+  }
+  &.mpin-message-form {
+    @media #{$small} {
+      font-size: $small-mpin-font-size-text;
+      width: $small-mpin-error-message-width;
+      padding-left: $small-mpin-error-message-left-padding;
+    }
+    @media #{$middle} {
+      font-size: $middle-mpin-font-size-text;
+      width: $middle-mpin-error-message-width;
+      padding-left: $middle-mpin-error-message-left-padding;
+    }
+  }
+  * {
+    font-weight: $mpin-font-weight-bold;
+  }
+}
+
+.mpin-error-message {
+  color: $mpin-color-text-error;
+}
+.mpin-info-message {
+  color: $mpin-color-text-info;
+}
+
+
+.mpin-break-all {
+  word-break:break-all;
+}
+

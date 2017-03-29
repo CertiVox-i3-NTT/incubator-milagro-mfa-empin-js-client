@@ -1,0 +1,88 @@
+<div id="mpinHomeView" class="mpin-content-view">
+
+  <div class="mpin-ui">
+    <div class="mpin-select">
+      <div class="mpin-select-label">
+        <div class="mpin-right">{{home_select_userid_label}}</div>
+      </div>
+      <div class="mpin-select-box">
+        <div class="mpin-btn-group">
+          <button class="mpin-dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <div id="mpinHomeMenuTarget" class="text">
+              {{home_select_menu_default_text}}
+            </div>
+            <div class="icon"><img src="{{ image_base_url }}/caret.png"></div>
+          </button>
+
+          <ul id="menuHomeDropDownMenu" class="mpin-dropdown-menu">
+            <li>
+              <a id="mpinHomeMenuMobile" href="javascript:void(0)" class="mpin-strong mpin-menu mpin-home-menu" data-menu-category="mobile">{{home_select_menu_mobile_text}}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login View -->
+  <div class="mpin-ui login-view">
+    <div class="mpin-input">
+      <div class="mpin-input-label">
+        <div class="mpin-right">{{home_input_pincode_label}}</div>
+      </div>
+      <div class="mpin-input-box">
+        <div class="mpin-pin-input">
+          <input type="password" id="mpinHomeLoginPinCodeInput" class="mpin-form-control mpin-pin-input-real" value="" />
+          <input id="mpinHomePinCodeLabel" type="password" class="mpin-form-control mpin-pin-input-label mpin-label-on" placeholder="{{home_pincode_input}}" disabled />
+          <input id="mpinHomeLoginPinCodePlaceHolder" type="password" class="mpin-form-control mpin-pin-input-base" value="" disabled />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mpin-ui login-view">
+    <div id="mpinHomeLoginError" class="mpin-error-message mpin-message-form mpin-hide">
+    </div>
+  </div>
+
+  <div class="mpin-ui login-view">
+    <div class="mpin-button">
+      <button type="button" id="mpinHomeLoginMpinLogin" class="mpin-btn mpin-btn-primary">{{home_login_button}}</button>
+    </div>
+  </div>
+
+  <!-- Renew View -->
+  <div class="mpin-ui renew-view">
+    <div id="mpinHomeRenewMessage" class="mpin-error-message mpin-message-center mpin-hide mpin-break-all">
+    </div>
+  </div>
+  <div class="mpin-ui renew-view">
+    <div class="mpin-button-double">
+      <div class="button-first">
+        <button type="button" id="mpinHomeDeleteButton" class="mpin-btn mpin-btn-danger">{{home_delete_button}}</button>
+      </div>
+      <div class="button-last">
+        <button type="button" id="mpinHomeRenewButton" class="mpin-btn mpin-btn-primary">{{home_renew_button}}</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Mobile Login View -->
+  <div class="mpin-ui mobile-login-view">
+    <button type="button" id="mpinHomeGoToMobileButton" class="mpin-btn mpin-btn-primary">{{home_goto_mobile_button}}</button>
+  </div>
+
+  <!-- footer menu -->
+  <div class="mpin-ui">
+    <div class="mpin-link">
+      <div id="mpinHomeGoToInstallViewButton" class="mpin-link-left">
+        {{home_install_link_text}}
+      </div>
+      <div id="mpinHomeGoToDeleteViewButton" class="mpin-link-right">
+        {{home_delete_link_text}}
+      </div>
+    </div>
+  </div>
+
+</div>

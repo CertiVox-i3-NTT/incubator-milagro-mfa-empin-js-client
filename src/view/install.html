@@ -1,0 +1,80 @@
+<div id="mpinInstallView" class="mpin-content-view">
+
+  <div id="mpinInstallInfo" class="mpin-ui mpin-hide">
+    <div id="mpinInstallInfoText" class="mpin-info-message mpin-message-center">
+    </div>
+  </div>
+
+
+  <div class="mpin-ui">
+    <div class="mpin-input">
+      <div class="mpin-input-label">
+        <div class="mpin-right">{{install_input_userid_label}}</div>
+      </div>
+      <div class="mpin-input-box mpin-first-view">
+        <input type="text" id="mpinInstallUserIdInput" class="mpin-form-control" placeholder="{{install_id_input}}" value="" />
+      </div>
+      <div class="mpin-input-box mpin-second-view">
+        <div id="mpinInstallUserIdFixed" class="mpin-input-fixed">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mpin-ui">
+    <div id="mpinInstallUserIdInputError" class="mpin-error-message mpin-message-form">
+    </div>
+  </div>
+
+
+  <div class="mpin-ui mpin-first-view">
+    <div class="mpin-button">
+      <button type="button" id="mpinInstallGetActivationCode" class="mpin-btn mpin-btn-primary">{{install_get_activation_code_button}}</button>
+    </div>
+  </div>
+
+  <!-- Second View -->
+  <div class="mpin-ui mpin-second-view">
+    <div class="mpin-input">
+      <div class="mpin-input-label">
+        <div class="mpin-right">{{install_input_activation_code_label}}</div>
+      </div>
+      <div class="mpin-input-box">
+        <input type="text" id="mpinInstallActivationCodeInput" class="mpin-form-control" placeholder="{{install_activation_code_input}}" />
+      </div>
+    </div>
+  </div>
+
+  <div class="mpin-ui">
+    <div id="mpinInstallActivationCodeInputError" class="mpin-error-message mpin-message-form">
+    </div>
+  </div>
+
+  <div class="mpin-ui mpin-second-view">
+    <div class="mpin-input">
+      <div class="mpin-input-label">
+        <div class="mpin-right">{{install_input_pincode_label}}</div>
+      </div>
+      <div class="mpin-input-box">
+        <div class="mpin-pin-input">
+          <input type="password" id="mpinInstallPinCodeInput" class="mpin-form-control mpin-pin-input-real" value="" />
+          <input id="mpinInstallPinCodeLabel" type="password" class="mpin-form-control mpin-pin-input-label mpin-label-on" placeholder="{{install_create_pincode_input}}" disabled />
+          <input id="mpinInstallPinCodePlaceHolder" type="password" class="mpin-form-control mpin-pin-input-base" value="" disabled />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mpin-ui">
+    <div id="mpinInstallPinCodeInputError" class="mpin-error-message mpin-message-form">
+    </div>
+  </div>
+
+  <div class="mpin-ui mpin-second-view">
+    <div class="mpin-button mpin-ui mpin-second-view">
+      <button type="button" id="mpinInstallActivateButton" class="mpin-btn mpin-btn-primary">{{install_install_button}}</button>
+    </div>
+  </div>
+
+</div>
+

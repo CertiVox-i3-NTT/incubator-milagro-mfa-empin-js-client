@@ -1,0 +1,190 @@
+.mpin-dropdown-toggle {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+  line-height: 1.3333333;
+  border-radius: 6px;
+  box-sizing: border-box;
+
+
+  font-weight: $mpin-font-weight-light;
+  color: $mpin-color-button-text;
+
+  display: inline-block;
+  margin-bottom: 0;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  white-space: nowrap;
+  line-height: 1.42857;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  @media #{$small} {
+    width: $small-mpin-dropdown-toggle-width;
+    height: $small-mpin-dropdown-toggle-height;
+    font-size: $small-mpin-font-size-button;
+    padding: 0px $small-mpin-dropdown-text-padding-left;
+  }
+  @media #{$middle} {
+    width: $middle-mpin-dropdown-toggle-width;
+    height: $middle-mpin-dropdown-toggle-height;
+    font-size: $middle-mpin-font-size-button;
+    padding: 6px $middle-mpin-dropdown-text-padding-left;
+    margin-right: $middle-mpin-dropdown-toggle-margin-right;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+
+  .text {
+    @media #{$small} {
+      max-width: $small-mpin-input-box-text-max-width;
+      font-size: $small-mpin-font-size-text;
+      padding-top: $small-mpin-input-box-text-padding-tb;
+      padding-bottom: $small-mpin-input-box-text-padding-tb;
+    }
+    @media #{$middle} {
+      max-width: $middle-mpin-input-box-text-max-width;
+      font-size: $middle-mpin-font-size-text;
+      padding-top: $middle-mpin-input-box-text-padding-tb;
+      padding-bottom: $middle-mpin-input-box-text-padding-tb;
+    }
+    float: left;
+    color: $mpin-color-text;
+    font-weight: $mpin-font-weight-bold;
+    @include three_dot_leader;
+  }
+  .icon {
+    float: right;
+    img {
+      @media #{$small} { height: 7px; }
+      @media #{$middle} { height: 8px; }
+      width: auto;
+    }
+  }
+
+}
+
+.mpin-open > .mpin-dropdown-toggle {
+  background-color: $mpin-color-menu-selected;
+}
+.mpin-open > .mpin-dropdown-menu {
+  display: block;
+}
+
+.mpin-dropdown-menu {
+  @media #{$small} { width: $small-mpin-dropdown-menu-width; }
+  @media #{$middle} { width: $middle-mpin-dropdown-menu-width; }
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: $mpin-z-index-dropdown;
+  display: none;
+  padding: 0;
+  margin: 2px 0 0;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  box-sizing: content-box;
+
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+
+  a {
+    @media #{$small} {
+      width: $small-mpin-dropdown-text-width;
+      font-size: $small-mpin-font-size-text;
+      padding-top: $small-mpin-dropdown-text-padding-tb;
+      padding-bottom: $small-mpin-dropdown-text-padding-tb;
+      padding-left: $small-mpin-dropdown-text-padding-left;
+      padding-right: 0px;
+    }
+    @media #{$middle} {
+      width: $middle-mpin-dropdown-text-width;
+      font-size: $middle-mpin-font-size-text;
+      padding-top: $middle-mpin-dropdown-text-padding-tb;
+      padding-bottom: $middle-mpin-dropdown-text-padding-tb;
+      padding-left: $middle-mpin-dropdown-text-padding-left;
+      padding-right: 0px;
+    }
+    float: left;
+    color: $mpin-color-text;
+    font-weight: $mpin-font-weight-bold;
+    text-decoration: none;
+    @include three_dot_leader;
+
+    &:hover {
+      background-color: $mpin-color-menu-selected;
+    }
+
+    &.mpin-strong {
+      color: $mpin-color-menu-strong;
+    }
+  }
+}
+
+.mpin-select {
+  @media #{$small} { height: $small-mpin-ui-height; }
+  @media #{$middle} { height: $middle-mpin-ui-height; }
+  vertical-align: middle;
+  display: table-cell;
+
+  .mpin-select-label, .mpin-select-box {
+    vertical-align: middle;
+    display: table-cell;
+  }
+
+  .mpin-select-label {
+    @media #{$small} {
+      width: $small-mpin-input-label-width;
+      font-size: $small-mpin-font-size-text;
+    }
+    @media #{$middle} {
+      width: $middle-mpin-input-label-width;
+      font-size: $middle-mpin-font-size-text;
+    }
+    color: $mpin-black;
+
+    .mpin-right {
+      float: right;
+      @media #{$small} { margin-right: $small-mpin-input-label-margin-right; }
+      @media #{$middle} { margin-right: $middle-mpin-input-label-margin-right; }
+      font-weight: $mpin-font-weight-bold;
+    }
+  }
+
+  .mpin-select-box {
+    @media #{$small} { width: $small-mpin-input-box-width; }
+    @media #{$middle} { width: $middle-mpin-input-box-width; }
+  }
+
+  // fixed after selected
+  .mpin-select-box {
+    .mpin-select-fixed {
+      @media #{$small} {
+        width: $small-mpin-input-box-width;
+        font-size: $small-mpin-font-size-text;
+      }
+      @media #{$middle} {
+        width: $middle-mpin-input-box-width;
+        font-size: $middle-mpin-font-size-text;
+      }
+      color: $mpin-color-text;
+      font-weight: $mpin-font-weight-bold;
+      @include three_dot_leader;
+    }
+  }
+}
