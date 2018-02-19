@@ -11,7 +11,8 @@ Mpin.Core = function() {
   this.config.info();
 
   this._mpin = new mpinjs({
-    server: this.config.rpaBaseURL
+    server: this.config.rpaBaseURL,
+    authProtocols: this.config.authProtocols
   });
   this._mpin.init(function (err, data) {
     if (err) {
@@ -92,8 +93,6 @@ Mpin.Core.prototype.activate = function(activationCodeStr, pin, callBack) {
     return;
   }
 
-  var newProtocol = true;
-
   self._mpin.confirmRegistration(self._userId, function (err, data) {
     if (err) {
       callBack(err, data);
@@ -107,7 +106,7 @@ Mpin.Core.prototype.activate = function(activationCodeStr, pin, callBack) {
       }
       Mpin.Logger.info('Activation Verify Success');
  
-      var finish = self._mpin.finishRegistration(self._userId, pin, activationCode, true);
+      var finish = self._mpin.finishRegistration(self._userId, pin, activationCode);
       self._storage.notify();
       if (finish !== true) {
         callBack(finish, null);
@@ -116,7 +115,7 @@ Mpin.Core.prototype.activate = function(activationCodeStr, pin, callBack) {
         callBack(null, null);
       }
     });
-  }, newProtocol);
+  });
 };
 
 
@@ -139,7 +138,6 @@ Mpin.Core.prototype.loginWithPin = function(pinCodeInput, callBack) {
     callBack(Mpin.Errors.missingUserId , null);
     return;
   }
-  var newProtocol = true;
 
   self._mpin.startAuthentication(user.userId, function (err, data) {
     if (err) {
@@ -162,7 +160,7 @@ Mpin.Core.prototype.loginWithPin = function(pinCodeInput, callBack) {
         self._storage.setDefaultIdentity(user.userId);
         self._loginChallengeToWebApp(user.userId, authData, callBack);
       }
-    }, newProtocol);
+    });
   });
 };
 
@@ -205,7 +203,6 @@ Mpin.Core.prototype.waitForMobileAuth = function(timeoutSeconds, requestSeconds,
   }
 
   var self = this;
-  var newProtocol = true;
   self._mpin.waitForMobileAuth(timeoutSeconds, requestSeconds, function(authError, responseData) {
     if (authError) {
       callBack(authError, authData);
@@ -224,7 +221,7 @@ Mpin.Core.prototype.waitForMobileAuth = function(timeoutSeconds, requestSeconds,
     }
   }, function (responseData) {
     return self.updateStatus(responseData);
-  }, newProtocol);
+  });
 };
 
 Mpin.Core.prototype.cancelMobileAuth = function() {

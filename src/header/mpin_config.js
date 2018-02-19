@@ -12,6 +12,7 @@ Mpin.Config = function() {
   this.imageBaseURL = "@@IMAGE_BASE_URL";
   this.rpaBaseURL = "@@RPA_BASE_URL";
 
+  this.authProtocols = ["1pass"];
   this.initialShowing = true;
   this.skipUserIdValidation = false;
   this.pinMaxLength = 10;
